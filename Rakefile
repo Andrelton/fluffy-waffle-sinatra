@@ -1,3 +1,4 @@
+# This loads the rake tasks defined in the "sinatra-activerecord" gem.
 require "sinatra/activerecord/rake"
 
 namespace :db do
