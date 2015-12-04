@@ -1,11 +1,7 @@
-namespace :db do
-  task :create do
-    puts "Creating database: #{APP_NAME}"
-    system("createdb #{APP_NAME}")
-  end
+require "sinatra/activerecord/rake"
 
-  task :drop do
-    puts "Dropping database: #{APP_NAME}"
-    system("dropdb #{APP_NAME}")
+namespace :db do
+  task :load_config do
+    require File.expand_path("../config/environment", __FILE__)
   end
 end
